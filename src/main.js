@@ -25,14 +25,26 @@
 // const getPersonagens = RICKANDMORTY.filter(personagemID =>(personagemID.id <50));
 // console.log("getPersonagens")
 
+// const getPersonagens = RICKANDMORTY.results;
+
+// for (let getPersonagem of getPersonagens){
+
+// const resultado = document.getElementById("resultado")
+
+// resultado.innerHTML+=`${getPersonagem.name} <img src="${getPersonagem.image}"/></br>`
+// }
+
 const getPersonagens = RICKANDMORTY.results;
-
-for (let getPersonagem of getPersonagens){
-
 const resultado = document.getElementById("resultado")
 
-resultado.innerHTML+=`${getPersonagem.name} <img src="${getPersonagem.image}"/></br>`
-}
+getPersonagens.map(getPersonagem => resultado.innerHTML += `<div class="card-container">
+<p>Nome: ${getPersonagem.name}</p> 
+<p>Status: ${getPersonagem.status}</p>
+<p>Genêro: ${getPersonagem.gender}</p>
+<img src="${getPersonagem.image}"/></br>`)
+
+
+
 // 
 // 
 
