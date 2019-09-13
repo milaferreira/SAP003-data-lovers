@@ -1,0 +1,31 @@
+.topBanner {
+/* background-image: url("rickandmorty.jpg"); */
+align-content: center;
+background-color: black;
+background-size: cover;
+height: 100px;
+width: 1200px;
+margin-top: 0 auto;
+font-family: 'Arial';
+    color:white;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;
+
+}
+
+#chart-div{
+    display: flex !important;
+    justify-content: center;
+    width: auto !important; 
+    height: auto !important;
+}
+
+.card-container{
+    align-content: center;
+    width: %;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 1rem 8rem;
+    display:inline-block;
+}
