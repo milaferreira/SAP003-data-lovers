@@ -1,8 +1,12 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
+function getStatus(personagens, status) {
+  return personagens.filter(item => item.status.includes(status));
+}
 
-const example = () => {
-  return "example";
+function getSpecies(personagens, species) {
+  return personagens.filter(item => item.species.includes(species));
+}
+
+const app = {
+  getStatus,
+  getSpecies
 };
-
-window.example = example;
