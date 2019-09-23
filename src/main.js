@@ -2,12 +2,16 @@ const getPersonagens = RICKANDMORTY.results;
 //mostra POKEMON
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
+const ordenarAZ = document.getElementById("buttonAZ");
 
 statusMenu.addEventListener("change",
   () => select(app.getStatus(getPersonagens, statusMenu.value)));
 
 speciesMenu.addEventListener("change",
   () => select(app.getSpecies(getPersonagens, speciesMenu.value)));
+
+ordenarAZ.addEventListener("click", 
+  () => select(app.orderAZ(getPersonagens)));
 
 window.onload = () => {
   loadStatusMenu(getPersonagens);
