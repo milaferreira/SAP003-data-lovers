@@ -1,4 +1,4 @@
-{
+const RICKANDMORTY = {
   "info": {
     "count": 493,
     "pages": 25,
@@ -4981,6 +4981,7 @@
     },
     "image": "https://rickandmortyapi.com/api/character/avatar/262.jpeg",
     "episode": ["https://rickandmortyapi.com/api/episode/15"],
+    "algo": [],
     "url": "https://rickandmortyapi.com/api/character/262",
     "created": "2017-12-31T13:40:32.312Z"
   }, {
@@ -9373,4 +9374,4 @@
     "url": "https://rickandmortyapi.com/api/character/493",
     "created": "2018-05-22T17:51:07.373Z"
   }]
-}
+};

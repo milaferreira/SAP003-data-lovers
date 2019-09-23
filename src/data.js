@@ -9,7 +9,6 @@ function getSpecies(getPersonagens, species,){
 };
 
 function orderAZ(arrayPersonagens){
-//ORDER
   const personagensOrdenados = arrayPersonagens.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
@@ -21,13 +20,6 @@ function orderAZ(arrayPersonagens){
   });
   return personagensOrdenados
 }
-// console.log(getPersonagens)
-//order ZA
-// function orderZA(){
-//   blabla.sort();
-//   blabla.reverse();
-//   select()
-// }
 
 const app = {
  getStatus,
@@ -35,4 +27,3 @@ const app = {
  orderAZ
 };
 
-//window.example = example;
