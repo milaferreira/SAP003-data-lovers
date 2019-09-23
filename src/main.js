@@ -1,67 +1,104 @@
-// optionsFirstFilter.addEventListener("click", firstFilter);
-// statusOptions.addEventListener("click", secondFilter);
-// speciesOptions.addEventListener("click", thirdFilter);
-
-// function firstFilter(){
-//     event.preventDefault();
-//     const optionFirst = document.getElementById("optionsFirstFilter").value;
-//     if (optionFirst == "status"){
-        
-//     }
-//     // const statusResult = document.getElementById("status").value;
-//     // const specieResult = document.getElementById("species").value;
-//     // const genderResult = document.getElementById("gender").value;
-//     // const conectionData = window.data.optionFirst()
-// }
-
-// document.getElementsByClassName("after_submit").style.visibility = "visible;
-// const getPersonagens = RICKANDMORTY.results;
-
-// personagens = () => {
-//     getPersonagens.map(get => get.id);
-// }
-// console.log(personagens())
-
-// const getPersonagens = RICKANDMORTY.filter(personagemID =>(personagemID.id <50));
-// console.log("getPersonagens")
-
-// const getPersonagens = RICKANDMORTY.results;
-
-// for (let getPersonagem of getPersonagens){
-
-// const resultado = document.getElementById("resultado")
-
-// resultado.innerHTML+=`${getPersonagem.name} <img src="${getPersonagem.image}"/></br>`
-// }
-
 const getPersonagens = RICKANDMORTY.results;
-const resultado = document.getElementById("resultado")
+  //criar variaveis
+const speciesMenu = document.getElementById("filtro-species");
+const statusMenu = document.getElementById("filtro-status");
+const ordenarAZ = document.getElementById("buttonAZ");
+// const ordenarZA = document.getElementById("buttonZA");
 
-getPersonagens.map(getPersonagem => resultado.innerHTML += `<div class="card-container">
-<p>Nome: ${getPersonagem.name}</p> 
-<p>Status: ${getPersonagem.status}</p>
-<p>Genêro: ${getPersonagem.gender}</p>
-<img src="${getPersonagem.image}"/></br>`)
+statusMenu.addEventListener("change",
+() => select(app.getStatus(getPersonagens, statusMenu.value)));
+
+speciesMenu.addEventListener("change",
+() => select(app.getSpecies(getPersonagens, speciesMenu.value)));
+
+ordenarAZ.addEventListener("click", 
+() => select(app.orderAZ(getPersonagens)));
+
+//ordenarZA.addEventListener("click", orderZA);
+
+// document.getElementById("decodebutton").addEventListener("click", DecodeMessage);
 
 
 
-// 
-// 
+window.onload = () => {
+    loadStatusMenu(getPersonagens);
+    loadSpeciesMenu(getPersonagens);
+    select(getPersonagens);
+};
 
-// getPersonagens.map(nome => resultado.innerHTML+= `${nome}`)
+function loadStatusMenu(arrayPersonagens){
+    //ajustar função para preencher os tres combos
+    const personagensStatus = [];
+    arrayPersonagens.map(personagem => {
+        if (!personagensStatus.includes(personagem.status)){
+            personagensStatus.push(personagem.status);
+        }else {
+            return false
+        }
+            return personagensStatus;
+    })
+
+statusMenu.innerHTML = ""
+statusMenu.innerHTML = `<option value= "none" class="firstselect"> Selecione </option>`;
+statusMenu.innerHTML += personagensStatus.map(status => `<option value= "${status}">
+${status}</option>`).join("");
+
+};
+
+function loadSpeciesMenu(arrayPersonagem){
+const personagemSpecies = [];
+arrayPersonagem.map(personagem =>{
+    if (!personagemSpecies.includes(personagem.species)){
+        personagemSpecies.push(personagem.species);
+    } else{
+        return false
+    }
+    return personagemSpecies
+})
+
+speciesMenu.innerHTML =""
+speciesMenu.innerHTML= `<option value="none" class="secondeSelect"> Selecione </option>`;
+speciesMenu.innerHTML += personagemSpecies.map(species => `<option value ="${species}">
+${species}</option>`).join("");
+
+}
 
 
+function select (array){
+    const resultado = document.getElementById("resultado");
+    resultado.innerHTML = "";
+    resultado.innerHTML += `${array.map(personagem => {
+        return `
+        <div class="card">
+            <h4>"${personagem.name}"</h4>
+            <img src="${personagem.image}" class="personagem"/>
+            <p>Status: ${personagem.status}</p>
+            <p>Species: ${personagem.species}</p>
+            <p>Type: ${personagem.type}</p>
+            <p>Gender: ${personagem.gender}</p>
+        </div>
+        `
+    }).join("")}`
+};    
 
-//map, filter, reduce, sort, include
+// function objectToArray(obj){
+//     const qualquercoisa = [];
+//     for (key)
 
-// for (let getPersonagem of getPersonagens){
-//     console.log(getPersonagem)
 // }
 
 
-// // getPersonagens.filter(id => id <=50)
 
-// console.log(getPersonagens);
-
-// for..of para arrays
-// for..in para objetos
+// function select (array){
+//     const resultado = document.getElementById("resultado");
+//     resultado.innerHTML = "";
+//     resultado.innerHTML += `${array.map(personagem => {
+//         return `
+//         <div class="card">
+//             <h4>"${personagem.name}"</h4>
+//             <img src="${personagem.image}"/>
+//             <p>Status: ${personagem.status}</p>
+//         </div>
+//         `
+//     }).join("")}`
+// }    
