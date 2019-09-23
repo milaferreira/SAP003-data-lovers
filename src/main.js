@@ -1,5 +1,4 @@
 const getPersonagens = RICKANDMORTY.results;
-//mostra POKEMON
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
 const ordenarAZ = document.getElementById("buttonAZ");
@@ -70,4 +69,3 @@ function select (array) {
         `;
   }).join("")}`;
 }    
-
