@@ -1,3 +1,9 @@
+
+@font-face {
+    font-family: fonte2;
+    src: url('Fonts/Adult.ttf');
+}
+
 #filtro-status{
     font-family: 'Lacquer', sans-serif;
     margin-left: 73%;
@@ -7,8 +13,11 @@
     border-block-end-style: outset;
     border-style: solid;
     border-radius: 10px;
+    border-color: #f28322;
+    background-color: #f6c9ac;
+    color: #1d1e40;
     border-color: rgb(73, 199, 151);
-    
+
 }
 
 #filtro-species{
@@ -18,11 +27,24 @@
     border-block-end-style: outset;
     border-style: solid;
     border-radius: 10px;
-    border-color: rgb(73, 199, 151);
+    border-color: #f28322;
     display: inline-block;
+    background-color: #f6c9ac;
+    color: #1d1e40;
 }
 
-
+#buttonAZ{
+    font-family: 'Lacquer', sans-serif;
+    margin-left: 0%;
+    border-radius: 20px;
+    border-block-end-style: outset;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: #f28322;
+    display: inline-block;
+    background-color: #f6c9ac;
+    color: #1d1e40;
+}
 
 head {    
     float: left;
@@ -38,7 +60,7 @@ body {
     background-repeat: no-repeat;
     background-position: top;
     background-size: 350px;
-    background-color: rgb(202, 214, 211)
+    background-color: #1d1e40;
 }
 
 #resultado {
@@ -46,7 +68,7 @@ body {
     display: grid;
     align-content: center;
     border-style: 100px 100px 100px 100px solid; 
-    margin-left: 100px;
+    margin-left: 50px;
     margin-right: 50px;
  }
 
@@ -56,8 +78,8 @@ body {
     padding: 5px 10px 15px 5px;
     border-style: solid;
     border-radius: 10%;
-    border-color: rgba(3, 180, 216, 0.295);
-    background-color: rgba(3, 180, 216, 0.295);
+    border-color:#82bf45; 
+    background-color: #82bf45;
     box-shadow: 50px;
  }
 
@@ -74,6 +96,7 @@ body {
     padding-left: 5px;
     margin-top: 0px;
     margin-block-end: 0em;
+    color: #1d1e40;
 }
 
 .card p{
@@ -82,6 +105,7 @@ body {
     padding-left: 5px;
     margin-top: 0px;
     margin-block-end: 0em;
+    color: #1d1e40;
 }
 
 #boxCalculo {
