@@ -1,3 +1,4 @@
+
 @font-face {
     font-family: fonte2;
     src: url('Fonts/Adult.ttf');
@@ -15,6 +16,8 @@
     border-color: #f28322;
     background-color: #f6c9ac;
     color: #1d1e40;
+    border-color: rgb(73, 199, 151);
+
 }
 
 #filtro-species{
