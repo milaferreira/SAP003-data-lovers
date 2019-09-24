@@ -2,15 +2,19 @@ const getPersonagens = RICKANDMORTY.results;
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
 const ordenarAZ = document.getElementById("buttonAZ");
+const ordenarZA = document.getElementById("buttonZA");
 
 statusMenu.addEventListener("change",
-  () => select(app.getStatus(getPersonagens, statusMenu.value)));
+  () => select(window.data.getStatus(getPersonagens, statusMenu.value)));
 
 speciesMenu.addEventListener("change",
-  () => select(app.getSpecies(getPersonagens, speciesMenu.value)));
+  () => select(window.data.getSpecies(getPersonagens, speciesMenu.value)));
 
 ordenarAZ.addEventListener("click", 
-  () => select(app.orderAZ(getPersonagens)));
+  () => select(window.data.orderAZ(getPersonagens)));
+
+ordenarZA.addEventListener("click",
+() => select(window.data.orderZA(getPersonagens)));
 
 window.onload = () => {
   loadStatusMenu(getPersonagens);
@@ -30,7 +34,7 @@ function loadStatusMenu(arrayPersonagens) {
   });
 
   statusMenu.innerHTML = "";
-  statusMenu.innerHTML = "<option value= \"none\"> Status </option>";
+  statusMenu.innerHTML = "<option value= \"none\"> Choose   Status </option>";
   statusMenu.innerHTML += personagensStatus.map(status =>
     `<option value= "${status}"> ${status}</option>`).join("");
 
@@ -48,7 +52,7 @@ function loadStatusSpecies(arrayPersonagens) {
   });
 
   speciesMenu.innerHTML = "";
-  speciesMenu.innerHTML = "<option value= \"none\"> Especie </option>";
+  speciesMenu.innerHTML = "<option value= \"none\"> Choose Specie </option>";
   speciesMenu.innerHTML += personagensSpecies.map(species =>
     `<option value= "${species}"> ${species}</option>`).join("");
 
@@ -69,3 +73,4 @@ function select (array) {
         `;
   }).join("")}`;
 }    
+
