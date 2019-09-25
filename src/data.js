@@ -1,10 +1,3 @@
-// esta é uma função de exemplo
-// veja como agregamos a função ao objeto global window
-
-// function getStatus(getPersonagens, status) {
-//   return getPersonagens.filter (el => el.status.includes(status));
-// };
-
 function getStatus(getPersonagens, status) {
   let calculoStatus = getPersonagens.filter (el => el.status.includes(status));
   
@@ -36,8 +29,7 @@ function orderAZ(arrayPersonagens) {
     if (a.name < b.name) {
       return -1;
     }
-    return 0;
-  });
+      return 0;
   return personagensOrdenados;
 }
 
@@ -58,7 +50,10 @@ window.data = {
   getStatus: getStatus,
   percentStatus: percentStatus,
   getSpecies: getSpecies,
+  percentSpecies: percentSpecies,
   orderAZ: orderAZ,
   orderZA: orderZA
 };
+
+
 

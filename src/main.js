@@ -23,7 +23,6 @@ ordenarAZ.addEventListener("click",
 ordenarZA.addEventListener("click", 
   () => select(window.data.orderZA(getPersonagens)));
 
-
 window.onload = () => {
   loadStatusMenu(getPersonagens);
   select(getPersonagens);
@@ -42,7 +41,7 @@ function loadStatusMenu(arrayPersonagens) {
   });
 
   statusMenu.innerHTML = "";
-  statusMenu.innerHTML = "<option value= \"none\"> Status </option>";
+  statusMenu.innerHTML = "<option value= \"none\"> Choose   Status </option>";
   statusMenu.innerHTML += personagensStatus.map(status =>
     `<option value= "${status}"> ${status}</option>`).join("");
 
@@ -60,7 +59,7 @@ function loadStatusSpecies(arrayPersonagens) {
   });
 
   speciesMenu.innerHTML = "";
-  speciesMenu.innerHTML = "<option value= \"none\"> Especie </option>";
+  speciesMenu.innerHTML = "<option value= \"none\"> Choose Specie </option>";
   speciesMenu.innerHTML += personagensSpecies.map(species =>
     `<option value= "${species}"> ${species}</option>`).join("");
 
@@ -81,3 +80,4 @@ function select (array) {
         `;
   }).join("")}`;
 }    
+
