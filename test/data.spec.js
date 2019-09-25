@@ -16,7 +16,7 @@ describe("função filtrar specie", () => {
   });
 
   it("retorna", () => {
-    expect(window.data.getSpecies([{"specie": "Human"}, {"specie": "Alien"}], "Human")).toEqual([{"specie": "Human"}]);
+    expect(window.data.getSpecies([{"species": "Human"}, {"species": "Alien"}], "Human")).toEqual([{"species": "Human"}]);
   });
 });
 

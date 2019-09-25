@@ -2,15 +2,27 @@ const getPersonagens = RICKANDMORTY.results;
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
 const ordenarAZ = document.getElementById("buttonAZ");
+const ordenarZA = document.getElementById("buttonZA");
+const calc = document.getElementById("boxCalculo");
 
-statusMenu.addEventListener("change",
-  () => select(app.getStatus(getPersonagens, statusMenu.value)));
+statusMenu.addEventListener("change", () => {
+  const lala = window.data.getStatus(getPersonagens, statusMenu.value)
+  select(lala);
+  calc.innerHTML= percentStatus(getPersonagens, lala);
+});
 
-speciesMenu.addEventListener("change",
-  () => select(app.getSpecies(getPersonagens, speciesMenu.value)));
+speciesMenu.addEventListener("change", () => {
+  const retorno = window.data.getSpecies(getPersonagens, speciesMenu.value)
+  select(retorno);
+  calc.innerHTML = percentSpecies(getPersonagens, retorno);
+});
 
 ordenarAZ.addEventListener("click", 
-  () => select(app.orderAZ(getPersonagens)));
+  () => select(window.data.orderAZ(getPersonagens)));
+
+ordenarZA.addEventListener("click", 
+  () => select(window.data.orderZA(getPersonagens)));
+
 
 window.onload = () => {
   loadStatusMenu(getPersonagens);
