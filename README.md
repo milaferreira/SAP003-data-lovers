@@ -2,8 +2,8 @@
 
 ## Índice
 
-* [1. Preâmbulo](#1-preâmbulo)
-* [2. Resumo do projeto](#2-resumo-do-projeto)
+* [1. O Projeto](#1-O-Projeto)
+* [2. Objetivos de Aprendizagem](#2-objetivos-de-aprendizagem)
 * [3. Objetivos de aprendizagem](#3-objetivos-de-aprendizagem)
 * [4. Considerações gerais](#4-consideracoes-gerais)
 * [5. Critérios mínimos de aceitação do projeto](#5-criterios-minimos-de-aceitacao-do-projeto)
@@ -14,78 +14,27 @@
 
 ***
 
-## 1. Preâmbulo
+## 1. O Projeto
 
-Segundo a [Forbes](https://www.forbes.com/sites/bernardmarr/2018/05/21/how-much-data-do-we-create-every-day-the-mind-blowing-stats-everyone-should-read)
-90% dos dados que existem hoje foram gerados durante os últimos dois anos.
-A cada dia geramos 2.5 milhões de terabytes de dados, uma cifra sem
-precedentes.
+O projeto consiste em construir uma página web com um conjuto de dados definido,
+onde o usuário consiga filtrar, ordenar e receber informação relevantes como por exemplo médias.
+Escrever sobre os dados
 
-Apesar disso, os dados por si só são de pouca utilidade. Para que essas grandes
-quantidades de dados se convertam em **informação** compreensível para os
-usuários, precisamos entender e processar estes dados. Uma forma simples de
-fazer isso é criando _interfaces_ e _visualizações_.
 
-Na imagem seguinte, você pode ser como os dados que estão na parte esquerda
-podem ser usados para construir a interface amigável e compreensível que está
-na parte direita.
-
-![json-interface](https://lh4.googleusercontent.com/Tn-RPXS26pVvOTdUzRT1KVaJ-_QbFs9SpcGLxSPE43fgbHaXtFgMUInuDt7kV41DkT1j8Tt29V0LxQW7SMtC6digOIhfTXSBKdwI08wUwhD3RAqlwy0hjfmhZ2BFe91mtmCSEqysfgk)
-
-\* Você pode ver em detalhe os dados neste [link](https://gist.github.com/lalogf/dd4aa3017a9f8aa8f90dfbca382c4dc9#file-student-json)
-e a interface construída a partir dele neste [link](https://app.talento.laboratoria.la/profile/HFOoMpOreBU2psCcjjLg5O2EWEv2).
-
-## 2. Resumo do projeto
-
-Neste projeto você **construirá uma _página web_ para visualizar um conjunto
-(set) de dados_** que se adeque às necessidades de seu usuário.
-
-Como entregável final terá uma página web que permita **visualizar dados,
-filtrá-los, ordená-los e fazer algum cálculo agregado**. Por cálculo agregado
-nos referimos aos diversos cálculos que pode fazer com os dados para mostrar a
-informação mais relevante para os usuários (médias, valores máximos e míimos,
-etc).
-
-Para este projeto trazemos uma série de dados de _temáticas diferentes_ para
-que você explore e decida com qual delas deseja trabalhar. Escolhemos
-especificamente estes conjuntos de dados porque cremos que se adequem bem a
-esta etapa de sua aprendizagem.
-
-Uma vez que você defina sua área de interesse, busque entender quem é seu
-usuário e o que exatamente ele necessita saber ou ver, para que assim possa
-construir a interface que o ajude a interagir e entender melhor os dados.
-
-Este são os dados que propomos:
-
-* [Indicadores de desenvolvimento do Banco Mundial](src/data/worldbank/worldbank.json)
-  de alguns países (Brasil, Chile, México e Perú). Estes dados incluem
-  indicadores demográficos, econômicos e comerciais.
-* [Pokémon](src/data/pokemon/pokemon.json):
-  Neste conjunto você encontrará uma lista com os 151 Pokémon da região de
-  Kanto, com suas respectivas estatísticas utilizadas no jogo [Pokémon GO](http://pokemongolive.com).
-* [Steam notícias](src/data/steam/steam.json):
-  Lista notícias relacionadas aos jogos da plataforma [Steam](https://store.steampowered.com/).
-* [League of Legends - Challenger leaderboard](src/data/lol/lol.json):
-  Este conjunto mostra a lista de jogadores de uma liga do jogo League of
-  Legends (LoL). Você pode revisar a documentação da API neste [link](https://developer.riotgames.com/api-methods/).
-* [Pessoas feridas por meios de transporte nos EUA](src/data/injuries/injuries.json).
-  Este conjunto mostra o número de pessoas feridas em acidentes de transporte,
-  com dados anuais desde 1960 e categorizados por tipo de transporte
-  (avião, barco, automóvel, moto e bicicleta).
-* [Rick and Morty](src/data/rickandmorty/rickandmorty.json).
-  Lista de personagens da série Rick & Morty. Você pode revisar a documentação
-  da API neste [link](https://rickandmortyapi.com).
-* [Pacientes nos EUA](src/data/patient/patient.json).
-  Uma lista de pacientes nos EUA. Você pode revisar a documentação da API neste
-  [link](https://r2.smarthealthit.org/Patient).
-
-Alguns conjuntos de dados têm uma identidade gráfica que você deverá utilizar
-na interface. Os guias de identidade gráfica podem ser encontrados neste
-[link](https://drive.google.com/open?id=1eeWFqrWpy-OYOH4EHDckFGunyrm9iNeE).
-
-## 3. Objetivos de aprendizagem
+## 2. Objetivos de Aprendizagems
 
 O objetivo principal deste projeto é que aprenda a desenhar e construir uma
+interface web onde se possa visualizar e manipular dados, entendendo o que o
+usuário necessita.
+-Escolha do tema
+-Definição do produto
+
+-Organização do projeto
+-Historia do usuário
+
+## 3. Objetivos de aprendizajbjbem
+
+<!-- O objetivo principal deste projeto é que aprenda a desenhar e construir uma
 interface web onde se possa visualizar e manipular dados, entendendo o que o
 usuário necessita.
 
@@ -105,7 +54,7 @@ Em outras palavras, você aprenderá a:
 * **Manejar eventos do DOM** para permitir interação com o usuário (filtros,
   ordenação, etc).
 * Entender os benefícios e complexidades de **trabalhar em equipe** em um
-  ambiente de incerteza.
+  ambiente de incerteza. -->
 
 ## 4. Considerações gerais
 
