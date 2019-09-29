@@ -39,3 +39,23 @@ describe("função filtrar desordenar", () => {
     expect(window.data.orderZA([{"name": "Rick Sanchez"}, {"name": "Beth Smith"}], "Rick Sanchez")).toEqual([{"name": "Rick Sanchez"}, {"name": "Beth Smith"}]);
   });
 });
+
+describe("função calcular status", () => {
+  it("is a function", () => {
+    expect(typeof window.data.percentStatus).toBe("function");
+  });
+
+  it("retorna", () => {
+    expect(window.data.percentStatus([{"status": "Alive"}, {"status": "Dead"}], [{"status": "Alive"}])).toEqual(50);
+  });
+});
+
+describe("função calcular especie", () => {
+  it("is a function", () => {
+    expect(typeof window.data.percentSpecies).toBe("function");
+  });
+
+  it("retorna", () => {
+    expect(window.data.percentSpecies([{"species": "Human"}, {"species": "Alien"}], [{"species": "Human"}])).toEqual(50);
+  });
+});
