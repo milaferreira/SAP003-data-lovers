@@ -1,33 +1,43 @@
 const getPersonagens = RICKANDMORTY.results;
+const recarregar = document.getElementById("refresh");
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
 const ordenarAZ = document.getElementById("buttonAZ");
 const ordenarZA = document.getElementById("buttonZA");
 const calc = document.getElementById("boxCalculo");
 
+recarregar.addEventListener("click", refreshPage);
+
 statusMenu.addEventListener("change", () => {
-  const lala = window.data.getStatus(getPersonagens, statusMenu.value)
-  select(lala);
-  calc.innerHTML= percentStatus(getPersonagens, lala);
+  const retorno = window.data.getStatus(getPersonagens, statusMenu.value);
+  show(retorno);
+  calc.innerHTML= percentStatus(getPersonagens, retorno) + "%";
 });
 
 speciesMenu.addEventListener("change", () => {
-  const retorno = window.data.getSpecies(getPersonagens, speciesMenu.value)
-  select(retorno);
-  calc.innerHTML = percentSpecies(getPersonagens, retorno);
+  const retorno = window.data.getSpecies(getPersonagens, speciesMenu.value);
+  show(retorno);
+  calc.innerHTML = percentSpecies(getPersonagens, retorno) + "%";
 });
 
 ordenarAZ.addEventListener("click", 
-  () => select(window.data.orderAZ(getPersonagens)));
+  () => show(window.data.orderAZ(getPersonagens)));
 
 ordenarZA.addEventListener("click", 
-  () => select(window.data.orderZA(getPersonagens)));
+  () => show(window.data.orderZA(getPersonagens)));
 
 window.onload = () => {
   loadStatusMenu(getPersonagens);
-  select(getPersonagens);
   loadStatusSpecies(getPersonagens);
+  show(getPersonagens);
 };
+
+function refreshPage() {
+  loadStatusMenu(getPersonagens);
+  loadStatusSpecies(getPersonagens);
+  show(getPersonagens);
+
+}
 
 function loadStatusMenu(arrayPersonagens) {
   const personagensStatus = [];
@@ -41,7 +51,7 @@ function loadStatusMenu(arrayPersonagens) {
   });
 
   statusMenu.innerHTML = "";
-  statusMenu.innerHTML = "<option value= \"none\"> Choose   Status </option>";
+  statusMenu.innerHTML = "<option value= \"none\"> Choose Status   </option>";
   statusMenu.innerHTML += personagensStatus.map(status =>
     `<option value= "${status}"> ${status}</option>`).join("");
 
@@ -65,8 +75,9 @@ function loadStatusSpecies(arrayPersonagens) {
 
 }
 
-function select (array) {
+function show (array) {
   const resultado = document.getElementById("resultado");
+  calc.innerHTML = "When you choose the filter, the percentual of the characters will appear!";
   resultado.innerHTML = "";
   resultado.innerHTML += `${array.map(personagem => {
     return `
@@ -80,4 +91,3 @@ function select (array) {
         `;
   }).join("")}`;
 }    
-
