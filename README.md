@@ -7,8 +7,7 @@
 * [3. Produto](#3-Produto)
 * [4. História de Usuário](#4-História-de-Usuário)
 * [5. Protótipo de Baixa Fidelidade](#5-Protótipo-de-Baixa-Fidelidade)
-* [6. Hacker edition](#6-hacker-edition)
-* [7. Interface final](#7-Interface-final)
+* [6. Interface final](#6-Interface-final)
 
 ***
 
@@ -22,7 +21,7 @@ Fizemos esse projeto com a lista de personagens da série Rick and Morty.
 
 ## 2. Objetivos de Aprendizagems
 
-OO objetivo principal deste projeto é que aprenda a desenhar e construir uma interface web onde se possa visualizar e manipular dados, entendendo o que o usuário necessita.
+O objetivo principal deste projeto é que aprenda a desenhar e construir uma interface web onde se possa visualizar e manipular dados, entendendo o que o usuário necessita.
 
 
 ## 3. Produto
