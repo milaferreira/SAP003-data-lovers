@@ -1,24 +1,21 @@
 function getStatus(getPersonagens, status) {
-  let calculoStatus = getPersonagens.filter (el => el.status.includes(status));
-  
-  return calculoStatus;
-   
+  let resultadoFiltro = getPersonagens.filter (el => el.status.includes(status));
+  return resultadoFiltro;
 };
 
-function percentStatus(status, calculoStatus){
-  const porcentagem = (calculoStatus.length *100)/status.length;
-  return Math.round(porcentagem *100) /100;
-  }
-
+function percentStatus(status, resultadoFiltro) {
+  const porcentagem = (resultadoFiltro.length *100)/status.length;
+  return Math.round(porcentagem);
+}
 
 function getSpecies(getPersonagens, species) {
-  let calcSpecies = getPersonagens.filter(el => el.species.includes(species));
-  return calcSpecies;
+  let resultadoSpecies = getPersonagens.filter(el => el.species.includes(species));
+  return resultadoSpecies;
 };
 
-function percentSpecies(species, calcSpecies){
-  let percent = (calcSpecies.length *100)/species.length;
-  return Math.round(percent *100)/100;
+function percentSpecies(species, resultadoSpecies) {
+  let percent = (resultadoSpecies.length *100)/species.length;
+  return Math.round(percent);
 }
 
 function orderAZ(arrayPersonagens) {
@@ -29,7 +26,8 @@ function orderAZ(arrayPersonagens) {
     if (a.name < b.name) {
       return -1;
     }
-      return 0;
+    return 0;
+  });
   return personagensOrdenados;
 }
 
@@ -49,11 +47,8 @@ function orderZA(arrayPersonagens) {
 window.data = {
   getStatus: getStatus,
   percentStatus: percentStatus,
-  getSpecies: getSpecies,
   percentSpecies: percentSpecies,
+  getSpecies: getSpecies,
   orderAZ: orderAZ,
   orderZA: orderZA
 };
-
-
-

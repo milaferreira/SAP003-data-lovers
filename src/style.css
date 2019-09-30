@@ -255,7 +255,6 @@
     }
       
      #filtro-species {
-
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
         font-size: 15px;
@@ -379,4 +378,5 @@
         font-size: 25px;
         box-shadow: 3px 4px 5px #3f3f3f;
     }
+
   }
