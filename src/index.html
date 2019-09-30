@@ -1,45 +1,37 @@
 <!DOCTYPE html>
- <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Rick and Morty</title>
-    <link rel="stylesheet" href="style.css" />
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  </head>
-    
-  <header>
-        
-    <div>
-          
-      <section class="botao">   
-        <button id ="refresh">Home</button>
-        <select id="filtro-status"></select> 
-        <text id="text" class="texto"> or </text>
-        <select id="filtro-species"></select>
-              
-        <button id="buttonAZ">A - Z </button>
-        <text id="text2" class="texto"> or </text>   
-        <button id="buttonZA"> Z - A </button>  
-        
-      </section>
-          
-      <div id="boxCalculo"> When you choose the filter, the percentual of the characters will appear!</div>
 
-    </div>
+  <html> 
 
-  </header>
+    <head>
+      <meta charset="utf-8">
+      <title>Rick and Morty</title>
+      <link rel="stylesheet" href="style.css" />
+      <link href="https://fonts.googleapis.com/css?family=Amatic+SC&display=swap" rel="stylesheet">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <section class="botao">
+      <button id ="refresh">Home</button>
+      <select id="filtro-status"></select> 
+      <text id="text" class="texto"> or </text>
+      <select id="filtro-species"></select>
+      <button id="buttonAZ">A - Z </button>
+      <text id="text2" class="texto"> or </text>   
+      <button id="buttonZA"> Z - A </button>  
+    </section>
     
-        
-      <body>
-    
-        <div id="resultado" class="card"></div>
-    
-        <script src="data/rickandmorty/rickandmorty.js"></script>
-        <script src="data.js"></script>
-        <script src="main.js"></script>
-    
-      </body>
-    
+    <p>
+      <div id="boxCalculo"> When you choose the filter, the percentual of the characters will appear!
+      </div>
+    </p>
+
+    <body>
+
+      <div id="resultado" class="card"></div>
+
+      <script src="data/rickandmorty/rickandmorty.js"></script>
+      <script src="data.js"></script>
+      <script src="main.js"></script>
+   </body>
+
   </html>
-    
