@@ -1,91 +1,91 @@
-const getPersonagens = RICKANDMORTY.results;
-const recarregar = document.getElementById("refresh");
+const getCharacters = RICKANDMORTY.results;
+const reload = document.getElementById("refresh");
 const statusMenu = document.getElementById("filtro-status");
 const speciesMenu = document.getElementById("filtro-species");
 const ordenarAZ = document.getElementById("buttonAZ");
 const ordenarZA = document.getElementById("buttonZA");
 const calc = document.getElementById("boxCalculo");
 
-recarregar.addEventListener("click", refreshPage);
+reload.addEventListener("click", refreshPage);
 
 statusMenu.addEventListener("change", () => {
-  const retorno = window.data.getStatus(getPersonagens, statusMenu.value);
+  const retorno = window.data.getStatus(getCharacters, statusMenu.value);
   show(retorno);
-  calc.innerHTML= percentStatus(getPersonagens, retorno) + "%";
+  calc.innerHTML= percentStatus(getCharacters, retorno) + "%";
 });
 
 speciesMenu.addEventListener("change", () => {
-  const retorno = window.data.getSpecies(getPersonagens, speciesMenu.value);
+  const retorno = window.data.getSpecies(getCharacters, speciesMenu.value);
   show(retorno);
-  calc.innerHTML = percentSpecies(getPersonagens, retorno) + "%";
+  calc.innerHTML = percentSpecies(getCharacters, retorno) + "%";
 });
 
 ordenarAZ.addEventListener("click", 
-  () => show(window.data.orderAZ(getPersonagens)));
+  () => show(window.data.orderAZ(getCharacters)));
 
 ordenarZA.addEventListener("click", 
-  () => show(window.data.orderZA(getPersonagens)));
+  () => show(window.data.orderZA(getCharacters)));
 
 window.onload = () => {
-  loadStatusMenu(getPersonagens);
-  loadStatusSpecies(getPersonagens);
-  show(getPersonagens);
+  loadStatusMenu(getCharacters);
+  loadStatusSpecies(getCharacters);
+  show(getCharacters);
 };
 
 function refreshPage() {
-  loadStatusMenu(getPersonagens);
-  loadStatusSpecies(getPersonagens);
-  show(getPersonagens);
+  loadStatusMenu(getCharacters);
+  loadStatusSpecies(getCharacters);
+  show(getCharacters);
 
 }
 
 function loadStatusMenu(arrayPersonagens) {
-  const personagensStatus = [];
-  arrayPersonagens.map(personagem => {
-    if (!personagensStatus.includes(personagem.status)) {
-      personagensStatus.push(personagem.status);
+  const charactersStatus = [];
+  arrayPersonagens.map(characters => {
+    if (!charactersStatus.includes(characters.status)) {
+      charactersStatus.push(characters.status);
     } else {
       return false;
     }
-    return personagensStatus;
+    return charactersStatus;
   });
 
   statusMenu.innerHTML = "";
   statusMenu.innerHTML = "<option value= \"none\"> Choose Status   </option>";
-  statusMenu.innerHTML += personagensStatus.map(status =>
+  statusMenu.innerHTML += charactersStatus.map(status =>
     `<option value= "${status}"> ${status}</option>`).join("");
 
 }
 
 function loadStatusSpecies(arrayPersonagens) {
-  const personagensSpecies = [];
-  arrayPersonagens.map(personagem => {
-    if (!personagensSpecies.includes(personagem.species)) {
-      personagensSpecies.push(personagem.species);
+  const charactersSpecies = [];
+  arrayPersonagens.map(characters => {
+    if (!charactersSpecies.includes(characters.species)) {
+      charactersSpecies.push(characters.species);
     } else {
       return false;
     }
-    return personagensSpecies;
+    return charactersSpecies;
   });
 
   speciesMenu.innerHTML = "";
   speciesMenu.innerHTML = "<option value= \"none\"> Choose Specie </option>";
-  speciesMenu.innerHTML += personagensSpecies.map(species =>
+  speciesMenu.innerHTML += charactersSpecies.map(species =>
     `<option value= "${species}"> ${species}</option>`).join("");
 
 }
 
 function show (array) {
-  const resultado = document.getElementById("resultado");
+  const result = document.getElementById("resultado");
   calc.innerHTML = "When you choose the filter, the percentual of the characters will appear!";
-  resultado.innerHTML = "";
-  resultado.innerHTML += `${array.map(personagem => {
+  result.innerHTML = "";
+  result.innerHTML += `${array.map(characters => {
     return `
         <div class="card1">
-            <img src="${personagem.image}"/>
-            <h4>${personagem.name}</h4>
-            <p>Status: ${personagem.status}</p>
-            <p>Species: ${personagem.species}</p>
+            <img src="${characters.image}"/>
+            <h4>${characters.name}</h4>
+            <p>Status: ${characters.status}</p>
+            <p>Species: ${characters.species}</p>
            
         </div>
         `;

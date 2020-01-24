@@ -1,27 +1,35 @@
 /* PC */
 
 @media only screen and (min-width: 800px) {
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;
+    }
+    .imagem{
+        max-width: 50%;
+    }
 
     .botao {
-        margin-top: -6%;
-        margin-left: 35%;
+        display: flex;
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 20px;
+        justify-content: center;
     }
 
     .texto {
         font-family: 'Amatic SC', cursive;
         font-weight: regular;
-        font-size: 15px;
+        font-size: 25px;
+        padding: 1%;
         color: #1d1e40;
-        margin-top: 1%;
     }
 
     #refresh {
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
         background-image: url("pics/button.png");
         background-size: 200px;
         background-position: center;
@@ -43,7 +51,7 @@
     #filtro-status {
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
         background-image: url("pics/button.png");
         background-size: 200px;
         background-position: center;
@@ -58,13 +66,12 @@
         display: inline-block;
         flex-flow: row wrap;
         justify-content: space-around;
-        margin-top: 40%;
     }
 
     #filtro-species {
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
         background-image: url("pics/button.png");
         background-size: 200px;
         background-position: center;
@@ -84,7 +91,7 @@
     #buttonAZ {
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
         background-image: url("pics/button.png");
         background-size: 200px;
         background-position: center;
@@ -104,7 +111,7 @@
     #buttonZA {
         font-family: 'Amatic SC', cursive;
         font-weight: bold;
-        font-size: 15px;
+        font-size: 25px;
         background-image: url("pics/button.png");
         background-size: 200px;
         background-position: center;
@@ -122,7 +129,7 @@
     }
 
     body {
-        background-image: url("pics/rick.png");
+        /* background-image: url("pics/rick.jpg"); */
         background-repeat: no-repeat;
         background-position: top;
         background-position-y: -35px;
@@ -181,7 +188,7 @@
       
     #boxCalculo {
         font-family: 'Amatic SC', cursive;
-        margin-left: 30%;
+        margin:3%;
         border-color: #a8ecab;
         background-color: #a8ecab;
         border-style: solid;
@@ -189,9 +196,9 @@
         border-radius: 5px;
         text-align: center;
         font-weight: bold;
-        font-size: 25px;
+        font-size: 35px;
+        width: 100%;
         box-shadow: 3px 4px 5px #3f3f3f;
-        display: inline;
         position: relative;
         justify-content: center;
     }
@@ -201,11 +208,20 @@
 /* MOBILE */
 
 @media only screen and (max-width: 800px) {
+    header{
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: center;    }
+    .imagem{
+        max-width: 100%;
+        margin: 2%;
+    }
 
     .texto {
         font-family: 'Amatic SC', cursive;
         font-weight: regular;
-        font-size: 15px;
+        font-size: 20px;
         color: #1d1e40;
         margin-top: 1%;
     }
@@ -215,7 +231,7 @@
         font-weight: bold;
         font-size: 15px;
         text-align: center;
-        margin: 50% auto auto auto;
+        /* margin: 50% auto auto auto; */
         margin-bottom: 0%;
         color: #1d1e40;
         padding: 2px 8px 2px 8px;
@@ -303,7 +319,7 @@
     }
 
     body {
-        background-image: url("pics/Rick.png");
+        /* background-image: url("pics/Rick.png"); */
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: -15px;

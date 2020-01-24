@@ -1,25 +1,25 @@
 function getStatus(getPersonagens, status) {
-  let resultadoFiltro = getPersonagens.filter (el => el.status.includes(status));
-  return resultadoFiltro;
+  let resultFilter = getPersonagens.filter (el => el.status.includes(status));
+  return resultFilter;
 };
 
-function percentStatus(status, resultadoFiltro) {
-  const porcentagem = (resultadoFiltro.length *100)/status.length;
-  return Math.round(porcentagem);
+function percentStatus(status, resultFilter) {
+  const perc = (resultFilter.length *100)/status.length;
+  return Math.round(perc);
 }
 
 function getSpecies(getPersonagens, species) {
-  let resultadoSpecies = getPersonagens.filter(el => el.species.includes(species));
-  return resultadoSpecies;
+  let resultSpecies = getPersonagens.filter(el => el.species.includes(species));
+  return resultSpecies;
 };
 
-function percentSpecies(species, resultadoSpecies) {
-  let percent = (resultadoSpecies.length *100)/species.length;
+function percentSpecies(species, resultSpecies) {
+  let percent = (resultSpecies.length *100)/species.length;
   return Math.round(percent);
 }
 
-function orderAZ(arrayPersonagens) {
-  const personagensOrdenados = arrayPersonagens.sort(function (a, b) {
+function orderAZ(arrayCharacters) {
+  const charactersOrders = arrayCharacters.sort(function (a, b) {
     if (a.name > b.name) {
       return 1;
     }
@@ -28,11 +28,11 @@ function orderAZ(arrayPersonagens) {
     }
     return 0;
   });
-  return personagensOrdenados;
+  return charactersOrders;
 }
 
-function orderZA(arrayPersonagens) {
-  const personagensDesordenados = arrayPersonagens.sort(function (a, b) {
+function orderZA(arrayCharacters) {
+  const characterInstead = arrayCharacters.sort(function (a, b) {
     if (a.name < b.name) {
       return 1;
     }
@@ -41,7 +41,7 @@ function orderZA(arrayPersonagens) {
     }
     return 0;
   });
-  return personagensDesordenados;
+  return characterInstead;
 }
 
 window.data = {
