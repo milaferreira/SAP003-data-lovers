@@ -129,7 +129,6 @@
     }
 
     body {
-        /* background-image: url("pics/rick.jpg"); */
         background-repeat: no-repeat;
         background-position: top;
         background-position-y: -35px;
@@ -231,7 +230,6 @@
         font-weight: bold;
         font-size: 15px;
         text-align: center;
-        /* margin: 50% auto auto auto; */
         margin-bottom: 0%;
         color: #1d1e40;
         padding: 2px 8px 2px 8px;
@@ -319,7 +317,6 @@
     }
 
     body {
-        /* background-image: url("pics/Rick.png"); */
         background-repeat: no-repeat;
         background-position: center;
         background-position-y: -15px;
